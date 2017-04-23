@@ -1,6 +1,7 @@
 
 import sys, serial, argparse
 import numpy as np
+import classifier
 
 # Variables
 threshold = 2.92
@@ -41,7 +42,13 @@ def main():
 		line = ser.readline().decode().strip()
 		if (float(line)>threshold): 
 			data = collect_data()
-			#classify_data(data)
+
+			# Classify data and output to the Arduino function
+			activity = classifier.classify_data(data)
+			"""
+			Arduino Function Here
+			Arduino(activity)
+			"""
 
 	# Closing the serial port
 	ser.close()

@@ -1,11 +1,7 @@
-import tensorflow as tf
 import numpy as np
-import pandas as pd
 import pickle
 from sklearn.model_selection import train_test_split
-from sklearn.decomposition import PCA
 from sklearn import svm
-import matplotlib.pyplot as plt
 import pickle
 """
 This is the main program to train the CNN
